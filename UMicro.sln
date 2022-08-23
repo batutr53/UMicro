@@ -26,6 +26,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UMicro.Services.PhotoStock"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UMicro.Services.Catalog", "Services\Catalog\UMicro.Services.Catalog\UMicro.Services.Catalog.csproj", "{DF27E991-3545-4C9F-A756-FCC67A0BCFEA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{2797B2F9-0B06-468D-936D-56669AB9DB8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UMicro.Services.Basket", "Services\Basket\UMicro.Services.Basket\UMicro.Services.Basket.csproj", "{D08D4352-93EA-4C0F-8121-98DDDE724981}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +52,10 @@ Global
 		{DF27E991-3545-4C9F-A756-FCC67A0BCFEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF27E991-3545-4C9F-A756-FCC67A0BCFEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF27E991-3545-4C9F-A756-FCC67A0BCFEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D08D4352-93EA-4C0F-8121-98DDDE724981}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D08D4352-93EA-4C0F-8121-98DDDE724981}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D08D4352-93EA-4C0F-8121-98DDDE724981}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D08D4352-93EA-4C0F-8121-98DDDE724981}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +67,8 @@ Global
 		{943368CF-F250-4F47-A8B3-9DB348AF857B} = {935BDE80-B41B-4D42-9164-1E7E6AB96CE4}
 		{2A2FBD11-0BE3-4F59-93D8-BCA8C5FD6D20} = {943368CF-F250-4F47-A8B3-9DB348AF857B}
 		{DF27E991-3545-4C9F-A756-FCC67A0BCFEA} = {68F84E63-B43B-439E-8E2F-1574D3ECF4BF}
+		{2797B2F9-0B06-468D-936D-56669AB9DB8E} = {935BDE80-B41B-4D42-9164-1E7E6AB96CE4}
+		{D08D4352-93EA-4C0F-8121-98DDDE724981} = {2797B2F9-0B06-468D-936D-56669AB9DB8E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {14C0E20A-1EBE-452B-B62F-195887CECD0F}

@@ -1,2 +1,6 @@
 Service
 Catalog : http://localhost:5211
+photosStock : http://localhost:5012
+
+identity
+http://localhost:5001
