@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using UMicro.IdentityServer.Dtos;
 using UMicro.IdentityServer.Models;
+using System.IdentityModel.Tokens.Jwt;
 using UMicro.Shared.Dtos;
 using static IdentityServer4.IdentityServerConstants;
 
@@ -42,6 +43,19 @@ namespace UMicro.IdentityServer.Controllers
 
             return NoContent();
     }
+
+        public async Task<IActionResult> GetUser()
+        {
+            var userIdClaim = User.Claims.FirstOrDefault(x=>x.Type==JwtRegisteredClaimNames.Sub);
+
+            if (userIdClaim == null) return BadRequest();
+            
+            var user= await _userManager.FindByIdAsync(userIdClaim.Value);
+
+            if (user == null) return BadRequest();
+    
+            return Ok(new {Id=user.Id,UserName=user.UserName,Email = user.Email,City = user.City});
+        }
 
 }
 }
