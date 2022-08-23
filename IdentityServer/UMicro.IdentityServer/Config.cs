@@ -14,7 +14,8 @@ namespace UMicro.IdentityServer
         public static IEnumerable<ApiResource> ApiResources => new ApiResource[]
         {
             new ApiResource("resource_catalog"){Scopes={"catalog_fullpermission"}},
-            new ApiResource("photo_stock_catalog"){Scopes={"photo_stock_fullpermission"}},
+            new ApiResource("resource_photo_stock"){Scopes={"photo_stock_fullpermission"}},
+            new ApiResource("resource_basket"){Scopes={"basket_fullpermission"}},
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
         public static IEnumerable<IdentityResource> IdentityResources =>
@@ -31,6 +32,7 @@ namespace UMicro.IdentityServer
             {
                 new ApiScope("catalog_fullpermission","Catalog Apı için Full erişim"),
                 new ApiScope("photo_stock_fullpermission","Photo Stock Apı için Full erişim"),
+                new ApiScope("basket_fullpermission","Basket Apı için Full erişim"),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
             };
 
@@ -51,7 +53,7 @@ namespace UMicro.IdentityServer
                 AllowOfflineAccess=true,
                 ClientSecrets={new Secret("secret".Sha256())},
                 AllowedGrantTypes=GrantTypes.ResourceOwnerPassword,
-                AllowedScopes={IdentityServerConstants.StandardScopes.Email,IdentityServerConstants.StandardScopes.OpenId,
+                AllowedScopes={"basket_fullpermission", IdentityServerConstants.StandardScopes.Email,IdentityServerConstants.StandardScopes.OpenId,
                                 IdentityServerConstants.StandardScopes.Profile,IdentityServerConstants.StandardScopes.OfflineAccess,IdentityServerConstants.LocalApi.ScopeName,"roles"
                   
                 },AccessTokenLifetime=1*60*60,

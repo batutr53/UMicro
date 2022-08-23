@@ -1,6 +1,7 @@
 Service
 Catalog : http://localhost:5211
 photosStock : http://localhost:5012
+basket : http://localhost:5013
 
 identity
 http://localhost:5001
