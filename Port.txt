@@ -3,5 +3,6 @@ Catalog : http://localhost:5211
 photosStock : http://localhost:5012
 basket : http://localhost:5013
 discount :http://localhost:5014
+order: http://localhost:5015
 identity
 http://localhost:5001
