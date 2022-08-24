@@ -50,6 +50,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UMicro.Services.FakePayment
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UMicro.Services.Order.Application", "Services\Order\UMicro.Services.Order.Application\UMicro.Services.Order.Application.csproj", "{7B5FD2DC-37D9-45D2-9D13-4C59AE13E82A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{A73F5992-04ED-4BD3-B817-1BD345846241}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UMicro.Gateway", "Gateways\UMicro.Gateway\UMicro.Gateway.csproj", "{3ABA0358-145E-4390-ADAB-7EFFAD75BCF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -104,6 +108,10 @@ Global
 		{7B5FD2DC-37D9-45D2-9D13-4C59AE13E82A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B5FD2DC-37D9-45D2-9D13-4C59AE13E82A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B5FD2DC-37D9-45D2-9D13-4C59AE13E82A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ABA0358-145E-4390-ADAB-7EFFAD75BCF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ABA0358-145E-4390-ADAB-7EFFAD75BCF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ABA0358-145E-4390-ADAB-7EFFAD75BCF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ABA0358-145E-4390-ADAB-7EFFAD75BCF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -127,6 +135,7 @@ Global
 		{E0B14B7E-AFD8-4090-845F-B49C4BE5BD52} = {935BDE80-B41B-4D42-9164-1E7E6AB96CE4}
 		{FBA2E66E-1832-47A6-B3E5-A17976B8D143} = {E0B14B7E-AFD8-4090-845F-B49C4BE5BD52}
 		{7B5FD2DC-37D9-45D2-9D13-4C59AE13E82A} = {AB8D91C2-6E39-4A04-A334-5486279B3711}
+		{3ABA0358-145E-4390-ADAB-7EFFAD75BCF8} = {A73F5992-04ED-4BD3-B817-1BD345846241}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {14C0E20A-1EBE-452B-B62F-195887CECD0F}
