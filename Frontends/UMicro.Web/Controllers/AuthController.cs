@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc;
 using UMicro.Web.Models;
 using UMicro.Web.Services.Interfaces;
 
@@ -35,6 +37,14 @@ namespace UMicro.Web.Controllers
             }
             return RedirectToAction(nameof(Index), "Home");
             
+        }
+
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            await _identityService.RevokeRefreshToken();
+            return RedirectToAction(nameof(HomeController.Index), "Home");
         }
     }
 }
