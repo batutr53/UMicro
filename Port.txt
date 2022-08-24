@@ -10,3 +10,6 @@ gateway: http://localhost:5000
 
 identity
 http://localhost:5001
+
+web
+http://localhost:5010
