@@ -5,21 +5,18 @@ using UMicro.Web.Services.Interfaces;
 
 namespace UMicro.Web.Handler
 {
-    public class ResourceOwnerPasswordTokenHandler:DelegatingHandler
+    public class ResourceOwnerPasswordTokenHandler : DelegatingHandler
     {
-
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IIdentityService _identityService;
         private readonly ILogger<ResourceOwnerPasswordTokenHandler> _logger;
 
-        public ResourceOwnerPasswordTokenHandler(IHttpContextAccessor httpContextAccessor,
-            IIdentityService identityService, ILogger<ResourceOwnerPasswordTokenHandler> logger)
+        public ResourceOwnerPasswordTokenHandler(IHttpContextAccessor httpContextAccessor, IIdentityService identityService, ILogger<ResourceOwnerPasswordTokenHandler> logger)
         {
             _httpContextAccessor = httpContextAccessor;
             _identityService = identityService;
             _logger = logger;
         }
-
 
         protected async override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
@@ -28,7 +25,6 @@ namespace UMicro.Web.Handler
             request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
 
             var response = await base.SendAsync(request, cancellationToken);
-
 
             if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
             {
@@ -48,7 +44,7 @@ namespace UMicro.Web.Handler
             }
 
             return response;
-        
-     }
+        }
     }
+
 }
