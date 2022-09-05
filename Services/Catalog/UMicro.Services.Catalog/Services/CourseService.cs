@@ -7,7 +7,7 @@ using UMicro.Shared.Dtos;
 
 namespace UMicro.Services.Catalog.Services
 {
-    internal class CourseService:ICourseService
+    public class CourseService:ICourseService
     {
         private readonly IMongoCollection<Course> _courseCollection;
         private readonly IMongoCollection<Category> _categoryCollection;
@@ -56,7 +56,8 @@ namespace UMicro.Services.Catalog.Services
 
         public async Task<Response<List<CourseDto>>> GetAllByUserIdAsync(string userId) 
         {
-            var courses = await _courseCollection.Find<Course>(x=>x.UserId == userId).ToListAsync();
+            var courses = await _courseCollection.Find<Course>(x => x.UserId == userId).ToListAsync();
+
             if (courses.Any())
             {
                 foreach (var course in courses)

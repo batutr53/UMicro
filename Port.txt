@@ -1,2 +1,15 @@
 Service
-Catalog : http://localhost:5211
+Catalog : http://localhost:5011
+photosStock : http://localhost:5012
+basket : http://localhost:5013
+discount :http://localhost:5014
+order: http://localhost:5015
+fakepayment: http://localhost:5016
+
+gateway: http://localhost:5000
+
+identity
+http://localhost:5001
+
+web
+http://localhost:5010
