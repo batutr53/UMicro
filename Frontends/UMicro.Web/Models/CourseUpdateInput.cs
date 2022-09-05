@@ -10,5 +10,6 @@
         public string UserId { get; set; }
         public FeatureViewModel Feature { get; set; }
         public string CategoryId { get; set; }
+        public IFormFile PhotoFormFile { get; set; }
     }
 }

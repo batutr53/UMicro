@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.Extensions.DependencyInjection;
 using UMicro.Shared.Services;
 using UMicro.Web.Handler;
+using UMicro.Web.Helpers;
 using UMicro.Web.Models;
 using UMicro.Web.Services;
 using UMicro.Web.Services.Interfaces;
@@ -18,7 +19,7 @@ builder.Services.Configure<ServiceApiSettings>(configuration.GetSection("Service
 
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddAccessTokenManagement();
-
+builder.Services.AddSingleton<PhotoHelper>();
 builder.Services.AddScoped<ISharedIdentityService,SharedIdentityService>();
 
 
@@ -33,6 +34,11 @@ builder.Services.AddHttpClient<ICatalogService, CatalogService>(opt =>
     opt.BaseAddress = new Uri($"{serviceapiSettings.GatewayBaseUri}/{serviceapiSettings.Catalog.Path}");
 }).AddHttpMessageHandler<ClientCredentialTokenHandler>();
 
+
+builder.Services.AddHttpClient<IPhotoStockService, PhotoStockService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{serviceapiSettings.GatewayBaseUri}/{serviceapiSettings.PhotoStock.Path}");
+}).AddHttpMessageHandler<ClientCredentialTokenHandler>();
 
 builder.Services.AddHttpClient<IUserService, UserService>(opt =>
 {
